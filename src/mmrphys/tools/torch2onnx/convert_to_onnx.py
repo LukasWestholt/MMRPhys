@@ -3,7 +3,7 @@ import onnx
 import json
 import logging
 from pathlib import Path
-from tools.torch2onnx.weight_mapper import convert_weights
+from mmrphys.tools.torch2onnx.weight_mapper import convert_weights
 
 
 logging.basicConfig(level=logging.INFO)
@@ -23,9 +23,9 @@ class OnnxConverter:
         self.half_precision = half_precision
 
         if self.height == 9:
-            from tools.torch2onnx.MMRPhysSEF import MMRPhysSEF as rPhysModel
+            from mmrphys.tools.torch2onnx.MMRPhysSEF import MMRPhysSEF as rPhysModel
         elif self.height == 72:
-            from tools.torch2onnx.MMRPhysLEF import MMRPhysLEF as rPhysModel
+            from mmrphys.tools.torch2onnx.MMRPhysLEF import MMRPhysLEF as rPhysModel
         else:
             raise ValueError("Invalid height. Supported values: 9, 72")
 

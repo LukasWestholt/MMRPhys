@@ -6,9 +6,9 @@ import time
 
 import numpy as np
 import torch
-from config import get_config
-from dataset import data_loader
-from neural_methods import trainer
+from mmrphys.config import get_config
+from mmrphys.dataset import data_loader
+from mmrphys.neural_methods import trainer
 from torch.utils.data import DataLoader
 
 RANDOM_SEED = 100  # 100, [10, 38, 55, 100, 128, 138, 212, 308, 319, 900]  # 455, 634, 740, 818]

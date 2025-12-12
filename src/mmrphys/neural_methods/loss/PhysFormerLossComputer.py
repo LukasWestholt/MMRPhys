@@ -9,7 +9,7 @@ import numpy as np
 import torch.nn.functional as F
 import pdb
 import torch.nn as nn
-from neural_methods.loss.FocalLoss import FocalLoss
+from mmrphys.neural_methods.loss.FocalLoss import FocalLoss
 
 def normal_sampling(mean, label_k, std):
     return math.exp(-(label_k-mean)**2/(2*std**2))/(math.sqrt(2*math.pi)*std)

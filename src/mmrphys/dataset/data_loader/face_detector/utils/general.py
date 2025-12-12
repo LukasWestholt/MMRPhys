@@ -16,7 +16,7 @@ import torch
 import torchvision
 import yaml
 
-from dataset.data_loader.face_detector.utils.torch_utils import init_torch_seeds
+from mmrphys.dataset.data_loader.face_detector.utils.torch_utils import init_torch_seeds
 
 # Settings
 torch.set_printoptions(linewidth=320, precision=5, profile='long')

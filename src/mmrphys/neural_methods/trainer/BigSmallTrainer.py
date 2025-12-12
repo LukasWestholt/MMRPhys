@@ -3,10 +3,10 @@
 # Training / Eval Imports 
 import torch
 import torch.optim as optim
-from neural_methods.trainer.BaseTrainer import BaseTrainer
-from neural_methods import loss
-from neural_methods.model.BigSmall import BigSmall
-from evaluation.bigsmall_multitask_metrics import (calculate_bvp_metrics, 
+from mmrphys.neural_methods.trainer.BaseTrainer import BaseTrainer
+from mmrphys.neural_methods import loss
+from mmrphys.neural_methods.model.BigSmall import BigSmall
+from mmrphys.evaluation.bigsmall_multitask_metrics import (calculate_bvp_metrics, 
                                                    calculate_resp_metrics)
 
 # Other Imports

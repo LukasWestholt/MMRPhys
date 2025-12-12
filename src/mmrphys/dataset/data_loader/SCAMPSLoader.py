@@ -17,7 +17,7 @@ import mat73
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy.io
-from dataset.data_loader.BaseLoader import BaseLoader
+from mmrphys.dataset.data_loader.BaseLoader import BaseLoader
 from tqdm import tqdm
 
 

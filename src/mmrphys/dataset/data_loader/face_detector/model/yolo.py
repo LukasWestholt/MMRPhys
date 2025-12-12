@@ -10,11 +10,11 @@ import torch.nn as nn
 
 logger = logging.getLogger(__name__)
 
-from dataset.data_loader.face_detector.utils.common import Conv, Bottleneck, SPP, DWConv, Focus, BottleneckCSP, C3, ShuffleV2Block, Concat, NMS, autoShape, StemBlock, BlazeBlock, DoubleBlazeBlock
-from dataset.data_loader.face_detector.utils.experimental import MixConv2d, CrossConv
-from dataset.data_loader.face_detector.utils.data_ops import check_anchor_order, make_divisible
-from dataset.data_loader.face_detector.utils.general import check_file, set_logging
-from dataset.data_loader.face_detector.utils.torch_utils import time_synchronized, fuse_conv_and_bn, model_info, scale_img, initialize_weights, select_device, copy_attr
+from mmrphys.dataset.data_loader.face_detector.utils.common import Conv, Bottleneck, SPP, DWConv, Focus, BottleneckCSP, C3, ShuffleV2Block, Concat, NMS, autoShape, StemBlock, BlazeBlock, DoubleBlazeBlock
+from mmrphys.dataset.data_loader.face_detector.utils.experimental import MixConv2d, CrossConv
+from mmrphys.dataset.data_loader.face_detector.utils.data_ops import check_anchor_order, make_divisible
+from mmrphys.dataset.data_loader.face_detector.utils.general import check_file, set_logging
+from mmrphys.dataset.data_loader.face_detector.utils.torch_utils import time_synchronized, fuse_conv_and_bn, model_info, scale_img, initialize_weights, select_device, copy_attr
 
 try:
     import thop  # for FLOPS computation

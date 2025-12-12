@@ -4,7 +4,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from dataset.data_loader.face_detector.utils.common import Conv, DWConv
+from mmrphys.dataset.data_loader.face_detector.utils.common import Conv, DWConv
 
 
 class CrossConv(nn.Module):

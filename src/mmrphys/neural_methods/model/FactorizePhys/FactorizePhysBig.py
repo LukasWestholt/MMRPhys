@@ -4,7 +4,7 @@ FactorizePhys: Effective Spatial-Temporal Attention in Remote Photo-plethysmogra
 
 import torch
 import torch.nn as nn
-from neural_methods.model.FactorizePhys.FSAM import FeaturesFactorizationModule
+from mmrphys.neural_methods.model.FactorizePhys.FSAM import FeaturesFactorizationModule
 
 nf = [8, 12, 16]
 

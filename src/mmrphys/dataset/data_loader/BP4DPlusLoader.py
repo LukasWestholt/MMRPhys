@@ -22,10 +22,10 @@ import cv2
 from skimage.util import img_as_float
 import numpy as np
 import pandas as pd
-from dataset.data_loader.BaseLoader import BaseLoader
+from mmrphys.dataset.data_loader.BaseLoader import BaseLoader
 from tqdm import tqdm
 
-from dataset.data_loader.BaseLoader import BaseLoader
+from mmrphys.dataset.data_loader.BaseLoader import BaseLoader
 
 
 class BP4DPlusLoader(BaseLoader):

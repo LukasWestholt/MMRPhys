@@ -5,22 +5,22 @@ import torch
 import torch.amp as amp # for mixed precision training
 import torch.optim as optim
 import neurokit2 as nk
-from evaluation.metrics import calculate_metrics, calculate_rsp_metrics, calculate_bp_metrics
-from neural_methods.loss.NegPearsonLoss import Neg_Pearson
+from mmrphys.evaluation.metrics import calculate_metrics, calculate_rsp_metrics, calculate_bp_metrics
+from mmrphys.neural_methods.loss.NegPearsonLoss import Neg_Pearson
 
-from neural_methods.model.MMRPhys.MMRPhysSNF import MMRPhysSNF
-from neural_methods.model.MMRPhys.MMRPhysSEF import MMRPhysSEF
-from neural_methods.model.MMRPhys.MMRPhysSLF import MMRPhysSLF
+from mmrphys.neural_methods.model.MMRPhys.MMRPhysSNF import MMRPhysSNF
+from mmrphys.neural_methods.model.MMRPhys.MMRPhysSEF import MMRPhysSEF
+from mmrphys.neural_methods.model.MMRPhys.MMRPhysSLF import MMRPhysSLF
 
-from neural_methods.model.MMRPhys.MMRPhysMNF import MMRPhysMNF
-from neural_methods.model.MMRPhys.MMRPhysMEF import MMRPhysMEF
-from neural_methods.model.MMRPhys.MMRPhysMLF import MMRPhysMLF
+from mmrphys.neural_methods.model.MMRPhys.MMRPhysMNF import MMRPhysMNF
+from mmrphys.neural_methods.model.MMRPhys.MMRPhysMEF import MMRPhysMEF
+from mmrphys.neural_methods.model.MMRPhys.MMRPhysMLF import MMRPhysMLF
 
-from neural_methods.model.MMRPhys.MMRPhysLNF import MMRPhysLNF
-from neural_methods.model.MMRPhys.MMRPhysLEF import MMRPhysLEF
-from neural_methods.model.MMRPhys.MMRPhysLLF import MMRPhysLLF
+from mmrphys.neural_methods.model.MMRPhys.MMRPhysLNF import MMRPhysLNF
+from mmrphys.neural_methods.model.MMRPhys.MMRPhysLEF import MMRPhysLEF
+from mmrphys.neural_methods.model.MMRPhys.MMRPhysLLF import MMRPhysLLF
 
-from neural_methods.trainer.BaseTrainer import BaseTrainer
+from mmrphys.neural_methods.trainer.BaseTrainer import BaseTrainer
 from tqdm import tqdm
 
 

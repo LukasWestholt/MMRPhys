@@ -13,7 +13,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import pandas as pd
 
-from neural_methods.model.FactorizePhys.FactorizePhys import FactorizePhys
+from mmrphys.neural_methods.model.FactorizePhys.FactorizePhys import FactorizePhys
 # from ptflops import get_model_complexity_info
 # from torch.utils.tensorboard import SummaryWriter
 

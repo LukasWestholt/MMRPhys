@@ -3,11 +3,11 @@ import os
 import numpy as np
 import torch
 import torch.optim as optim
-from evaluation.metrics import calculate_metrics
-from neural_methods.loss.NegPearsonLoss import Neg_Pearson
-from neural_methods.model.FactorizePhys.FactorizePhys import FactorizePhys
-from neural_methods.model.FactorizePhys.FactorizePhysBig import FactorizePhysBig
-from neural_methods.trainer.BaseTrainer import BaseTrainer
+from mmrphys.evaluation.metrics import calculate_metrics
+from mmrphys.neural_methods.loss.NegPearsonLoss import Neg_Pearson
+from mmrphys.neural_methods.model.FactorizePhys.FactorizePhys import FactorizePhys
+from mmrphys.neural_methods.model.FactorizePhys.FactorizePhysBig import FactorizePhysBig
+from mmrphys.neural_methods.trainer.BaseTrainer import BaseTrainer
 from tqdm import tqdm
 
 

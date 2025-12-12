@@ -8,7 +8,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn.modules.batchnorm import _BatchNorm
-from neural_methods.model.FactorizePhys.FSAM import FeaturesFactorizationModule
+from mmrphys.neural_methods.model.FactorizePhys.FSAM import FeaturesFactorizationModule
 
 
 

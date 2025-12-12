@@ -12,7 +12,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from neural_methods.model.FactorizePhys.FactorizePhysBig import FactorizePhysBig
+from mmrphys.neural_methods.model.FactorizePhys.FactorizePhysBig import FactorizePhysBig
 # from torch.utils.tensorboard import SummaryWriter
 
 model_config = {

@@ -40,10 +40,10 @@ from scipy import sparse
 import math
 from math import ceil
 
-from dataset.data_loader.BaseLoader import BaseLoader
+from mmrphys.dataset.data_loader.BaseLoader import BaseLoader
 from tqdm import tqdm
 
-from dataset.data_loader.BaseLoader import BaseLoader
+from mmrphys.dataset.data_loader.BaseLoader import BaseLoader
 
 
 class BP4DPlusBigSmallLoader(BaseLoader):

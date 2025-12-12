@@ -4,10 +4,10 @@ import scipy.io
 from copy import deepcopy
 from scipy.signal import butter
 from sklearn.metrics import f1_score, precision_recall_fscore_support
-from evaluation.metrics import calculate_metrics, _reform_data_from_dict
-from evaluation.post_process import _detrend, _next_power_of_2, _calculate_SNR
+from mmrphys.evaluation.metrics import calculate_metrics, _reform_data_from_dict
+from mmrphys.evaluation.post_process import _detrend, _next_power_of_2, _calculate_SNR
 from tqdm import tqdm
-from evaluation.BlandAltmanPy import BlandAltman
+from mmrphys.evaluation.BlandAltmanPy import BlandAltman
 
 # PPG Metrics
 def calculate_bvp_metrics(predictions, labels, config):

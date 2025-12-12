@@ -5,8 +5,8 @@ Efficient and Robust Multidimensional Attention in Remote Physiological Sensing 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from neural_methods.model.MMRPhys.TSFM import FeaturesFactorizationModule
-from neural_methods.model.MMRPhys.MMRPhysBP import BP_Estimation_Head
+from mmrphys.neural_methods.model.MMRPhys.TSFM import FeaturesFactorizationModule
+from mmrphys.neural_methods.model.MMRPhys.MMRPhysBP import BP_Estimation_Head
 from copy import deepcopy
 
 nf_BVP = [8, 12, 16]

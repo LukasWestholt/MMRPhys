@@ -15,11 +15,11 @@ import numpy as np
 import math
 import torch
 import torch.optim as optim
-from evaluation.metrics import calculate_metrics
-from neural_methods.loss.PhysNetNegPearsonLoss import Neg_Pearson
-from neural_methods.loss.PhysFormerLossComputer import TorchLossComputer
-from neural_methods.model.PhysFormer import ViT_ST_ST_Compact3_TDC_gra_sharp
-from neural_methods.trainer.BaseTrainer import BaseTrainer
+from mmrphys.evaluation.metrics import calculate_metrics
+from mmrphys.neural_methods.loss.PhysNetNegPearsonLoss import Neg_Pearson
+from mmrphys.neural_methods.loss.PhysFormerLossComputer import TorchLossComputer
+from mmrphys.neural_methods.model.PhysFormer import ViT_ST_ST_Compact3_TDC_gra_sharp
+from mmrphys.neural_methods.trainer.BaseTrainer import BaseTrainer
 from tqdm import tqdm
 from scipy.signal import welch
 

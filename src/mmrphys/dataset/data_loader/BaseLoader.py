@@ -66,7 +66,7 @@ class BaseLoader(Dataset):
         self.config_data = config_data
 
         if self.do_preprocess and self.preprocess_frames:
-            from dataset.data_loader.face_detector.YOLO5Face import YOLO5Face
+            from mmrphys.dataset.data_loader.face_detector.YOLO5Face import YOLO5Face
             if 'Y5F' in self.config_data.PREPROCESS.CROP_FACE.BACKEND:
                 self.Y5FObj = YOLO5Face(self.config_data.PREPROCESS.CROP_FACE.BACKEND, device)
 

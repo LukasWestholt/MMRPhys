@@ -9,7 +9,7 @@ import torch.nn as nn
 from PIL import Image, ImageDraw
 import matplotlib
 import matplotlib.pyplot as plt
-from dataset.data_loader.face_detector.utils.data_ops import letterbox, non_max_suppression, make_divisible, scale_coords, xyxy2xywh
+from mmrphys.dataset.data_loader.face_detector.utils.data_ops import letterbox, non_max_suppression, make_divisible, scale_coords, xyxy2xywh
 import warnings
 
 # Settings

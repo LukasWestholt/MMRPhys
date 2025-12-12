@@ -2,7 +2,7 @@ import argparse
 import json
 import logging
 from pathlib import Path
-from tools.torch2onnx.convert_to_onnx import OnnxConverter
+from mmrphys.tools.torch2onnx.convert_to_onnx import OnnxConverter
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

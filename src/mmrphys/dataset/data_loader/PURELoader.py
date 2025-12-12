@@ -14,7 +14,7 @@ import re
 
 import cv2
 import numpy as np
-from dataset.data_loader.BaseLoader import BaseLoader
+from mmrphys.dataset.data_loader.BaseLoader import BaseLoader
 from tqdm import tqdm
 
 

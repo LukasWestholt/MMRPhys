@@ -21,7 +21,7 @@ import argparse
 import matplotlib.pyplot as plt
 from scipy.signal import periodogram, welch
 import time
-from dataset.data_loader.face_detector.YOLO5Face import YOLO5Face
+from mmrphys.dataset.data_loader.face_detector.YOLO5Face import YOLO5Face
 import yaml
 import threading
 from queue import Queue
@@ -132,7 +132,7 @@ class InferenceWorker:
             raise ValueError(f"Invalid model type: {self.model_type}")
 
     def init_onnx_model(self):
-        from tools.torch2onnx.MMRPhysSEF import MMRPhysSEF as rPhysModel
+        from mmrphys.tools.torch2onnx.MMRPhysSEF import MMRPhysSEF as rPhysModel
 
         self.model = rPhysModel(self.num_frames, self.md_config, self.in_channels)
         self.model = ort.InferenceSession(self.model_path)
@@ -140,11 +140,11 @@ class InferenceWorker:
 
     def init_torch_model(self):
         if self.height == 9:
-            from neural_methods.model.MMRPhys.MMRPhysSEF import MMRPhysSEF as rPhysModel
+            from mmrphys.neural_methods.model.MMRPhys.MMRPhysSEF import MMRPhysSEF as rPhysModel
         elif self.height == 36:
-            from neural_methods.model.MMRPhys.MMRPhysMEF import MMRPhysMEF as rPhysModel
+            from mmrphys.neural_methods.model.MMRPhys.MMRPhysMEF import MMRPhysMEF as rPhysModel
         elif self.height == 72:
-            from neural_methods.model.MMRPhys.MMRPhysLEF import MMRPhysLEF as rPhysModel
+            from mmrphys.neural_methods.model.MMRPhys.MMRPhysLEF import MMRPhysLEF as rPhysModel
         else:
             raise ValueError(f"Invalid height and width: {self.height, self.width}")
 
