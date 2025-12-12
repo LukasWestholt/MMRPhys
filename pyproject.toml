@@ -1,9 +1,9 @@
 [project]
 name = "mmrphys"
 version = "0.1.0"
-description = "Add your description here"
+description = "Multi-Modal Multi-Task Remote Physiological Sensing"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 dependencies = [
     "torch==2.9.1+cpu",
     "torchvision==0.24.1+cpu",
