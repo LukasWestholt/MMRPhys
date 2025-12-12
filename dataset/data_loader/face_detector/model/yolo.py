@@ -320,9 +320,6 @@ def parse_model(d, ch):  # model_dict, input_channels(3)
     return nn.Sequential(*layers), sorted(save)
 
 
-from thop import profile
-from thop import clever_format
-
 if __name__ == '__main__':
     sys.path.append('./')  # to run '$ python *.py' files in subdirectories
     parser = argparse.ArgumentParser()
@@ -342,6 +339,6 @@ if __name__ == '__main__':
         input = torch.Tensor(1, 3, 512, 640).to(device)
     model.train()
     print(model)
-    flops, params = profile(model, inputs=(input, ))
-    flops, params = clever_format([flops, params], "%.3f")
+    flops, params = thop.profile(model, inputs=(input, ))
+    flops, params = thop.clever_format([flops, params], "%.3f")
     print('Flops:', flops, ',Params:' ,params)
