@@ -29,9 +29,6 @@ dependencies = [
 [tool.uv]
 package = true
 
-[tool.setuptools]
-packages = ["dataset", "neural_methods", "tools"]
-
 [tool.uv.sources]
 torch = [
   { index = "pytorch-cpu" },
@@ -44,3 +41,10 @@ torchvision = [
 name = "pytorch-cpu"
 url = "https://download.pytorch.org/whl/cpu"
 explicit = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
