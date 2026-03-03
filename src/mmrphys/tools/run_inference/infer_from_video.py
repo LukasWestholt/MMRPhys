@@ -24,7 +24,7 @@ import time
 from mmrphys.dataset.data_loader.face_detector.YOLO5Face import YOLO5Face
 import yaml
 import threading
-from queue import Queue
+import queue
 import matplotlib.animation as animation
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import tkinter as tk
@@ -174,7 +174,11 @@ class InferenceWorker:
 
     def infer_rphys(self, frame_buffer):
         if self.model_type == 'onnx':
-            output = self.model.run(None, {'input': frame_buffer.astype(np.float32)})
+            if self.model.get_inputs()[0].type == "tensor(float16)":
+                output = self.model.run(None, {'input': frame_buffer.astype(np.float16)})
+            else:
+                print(f"Assume {self.model_type} is float32.")
+                output = self.model.run(None, {'input': frame_buffer.astype(np.float32)})
             bvp = output[0]
             rsp = output[1]
 
@@ -492,8 +496,8 @@ class RemoteVitalSigns:
         self.init_buffers()
         
         # Initialize threading components
-        self.frame_queue = Queue(maxsize=100)
-        self.result_queue = Queue()
+        self.frame_queue = queue.Queue(maxsize=100)
+        self.result_queue = queue.Queue()
         self.stop_event = threading.Event()
 
         # Determine if we're using live capture or recorded video
@@ -574,14 +578,14 @@ class RemoteVitalSigns:
                 try:
                     self.frame_queue.put((count_frame, face_frame, processed_frame, True), 
                                     timeout=0.01)
-                except Queue.Full:
+                except queue.Full:
                     print("Frame queue full!")  # Debug print
                     continue
             else:
                 try:
                     self.frame_queue.put((count_frame, None, None, False), 
                                     timeout=0.01)
-                except Queue.Full:
+                except queue.Full:
                     continue
 
             count_frame += 1
