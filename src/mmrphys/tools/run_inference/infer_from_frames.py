@@ -163,7 +163,11 @@ class InferenceWorker:
 
     def infer_rphys(self, frame_buffer):
         if self.model_type == 'onnx':
-            return self.model.run(None, {'input': frame_buffer.astype(np.float32)})
+            if self.model.get_inputs()[0].type == "tensor(float16)":
+                return self.model.run(None, {'input': frame_buffer.astype(np.float16)})
+            else:
+                print(f"Assume {self.model_type} is float32.")
+                return self.model.run(None, {'input': frame_buffer.astype(np.float32)})
         else:
             with torch.no_grad():
                 torch_frames = torch.from_numpy(frame_buffer).float().to(self.device)
