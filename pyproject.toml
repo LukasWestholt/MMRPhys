@@ -5,8 +5,8 @@ description = "Multi-Modal Multi-Task Remote Physiological Sensing"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "torch==2.9.1+cpu",
-    "torchvision==0.24.1+cpu",
+    "torch>=2.9.1",
+    "torchvision>=0.24.1",
     "scipy>=1.13.0",
     "numpy>=1.26.4",
     "tensorboard>=2.15.2",
